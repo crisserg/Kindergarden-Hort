@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinderkrippe - Tagesprogramm</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #2a9d8f;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #e76f51;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #d35400;
+        }
+        #program {
+            margin-top: 20px;
+            color: #333;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Willkommen in der Kinderkrippe!</h1>
+    <p>Entdecken Sie unser tägliches Programm für Ihre Kleinen.</p>
+    
+    <button onclick="zeigeProgramm()">Tagesprogramm anzeigen</button>
+    
+    <div id="program"></div>
+
+    <script>
+        function zeigeProgramm() {
+            const programmText = `
+                <ul>
+                    <li><strong>08:00 - 09:00:</strong> Ankunft und Begrüßung</li>
+                    <li><strong>09:00 - 10:00:</strong> Kreativstunde (Basteln und Malen)</li>
+                    <li><strong>10:00 - 10:30:</strong> Snackzeit</li>
+                    <li><strong>10:30 - 12:00:</strong> Spielzeit im Garten</li>
+                    <li><strong>12:00 - 13:00:</strong> Mittagessen</li>
+                    <li><strong>13:00 - 15:00:</strong> Mittagsruhe</li>
+                    <li><strong>15:00 - 16:00:</strong> Bildungsaktivitäten (Lesen, Puzzeln)</li>
+                    <li><strong>16:00 - 17:00:</strong> Abholzeit</li>
+                </ul>
+            `;
+            document.getElementById("program").innerHTML = programmText;
+        }
+    </script>
+
+</body>
+</html>
